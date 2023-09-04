@@ -22,7 +22,7 @@ minutes_variation = random.randint(0, int(config["schedule"]["minutes_variation"
 
 
 def main():
-    print('[] Programa Auto Bater Ponto iniciado []')
+    print('[] Programa AutoCheckInTangerino iniciado []')
 
     if not is_holiday() and is_work_day:
         execute_program()
