@@ -48,7 +48,7 @@ def is_work_day():
     work_day = cal.is_working_day(actual_date)
 
     if not work_day:
-        print('[] Como hoje eh um dia que você trabalha, não iremos bater o ponto.. []')
+        print('[] Como hoje nao eh um dia que você trabalha, não iremos bater o ponto.. []')
 
     return work_day
 
