@@ -10,7 +10,7 @@ import logging
 # Config's Files
 config = configparser.ConfigParser()
 config.read("./configfile.ini")  # Example config: "hour = config["schedule"]"
-logging.basicConfig(filename='execution.log', encoding='utf-8', level=logging.INFO)
+logging.basicConfig(format='%(asctime)s %(message)s', filename='execution.log', encoding='utf-8', level=logging.INFO)
 
 # Vars
 cal = Brazil()
