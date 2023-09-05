@@ -17,4 +17,5 @@ $ pip install -U selenium
 $ apt-get install chromium-chromedriver
 ```
 
+Remove winsound lib if not using windows.
 
