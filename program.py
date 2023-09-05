@@ -48,7 +48,7 @@ def is_work_day():
     work_day = cal.is_working_day(actual_date)
 
     if not work_day:
-        print('[] Como hoje nao eh um dia que você trabalha, não iremos bater o ponto.. []')
+        print('[] Como hoje nao eh um dia que voce trabalha, nao iremos bater o ponto.. []')
 
     return work_day
 
@@ -63,7 +63,7 @@ def is_holiday():
 
 
 def do_check_in():
-    time.sleep(minutes_variation)
+    time.sleep(minutes_variation * 60)
 
     browser = get_browser()
     browser.get(config["tangerino"]["check_in_url"])
