@@ -2,7 +2,7 @@
  Project just for study purpose in python
 
 
-Libs to install in linux:
+Libs to install in Ubuntu:
 
 ```
 $ apt-get install python3
