@@ -21,7 +21,6 @@ $ apt-get install chromium-chromedriver
 
 Crontab:
 
-in terminal linux:
 ```
 crontab -e
 ```
