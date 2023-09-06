@@ -22,10 +22,3 @@ I recommend:
 57 17 * * * cd /home/USER/AutoCheckInTangerino && python3 program.py
 ```
 
-
-
-
-
-
-Remove winsound lib if not using windows.
-
