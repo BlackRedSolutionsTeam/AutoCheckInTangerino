@@ -21,4 +21,3 @@ I recommend:
 0 9 * * * cd /home/USER/AutoCheckInTangerino && python3 program.py
 57 17 * * * cd /home/USER/AutoCheckInTangerino && python3 program.py
 ```
-
