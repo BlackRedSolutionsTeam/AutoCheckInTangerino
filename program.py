@@ -66,15 +66,27 @@ def do_check_in():
     browser.get(config["tangerino"]["check_in_url"])
     logging.info('[] Entrando no site... []')
 
-    logging.info('[] Procurando elemento com id: codigoEmpregador []')
+    logging.info('[] Procurando input com id: codigoEmpregador []')
     input_employer_code = browser.find_element(By.ID, 'codigoEmpregador')
-    input_employer_code.send_keys(config["infos"]["employer_code"])
-    logging.info('[] Digitei o codigo empregador: ' + config["infos"]["employer_code"] + ' []')
 
-    logging.info('[] Procurando elemento com id: codigoPin []')
+    if input_employer_code:
+        input_employer_code.send_keys(config["infos"]["employer_code"])
+        logging.info('[] Digitei o codigo empregador: ' + config["infos"]["employer_code"] + ' []')
+
+    logging.info('[] Procurando input com id: codigoPin []')
     input_employer_code = browser.find_element(By.ID, 'codigoPin')
-    input_employer_code.send_keys(config["infos"]["pin"])
-    logging.info('[] Digitei o PIN ' + config["infos"]["employer_code"] + ' []')
+
+    if input_employer_code:
+        input_employer_code.send_keys(config["infos"]["pin"])
+        logging.info('[] Digitei o PIN ' + config["infos"]["pin"] + ' []')
+
+    logging.info('[] Procurando button com id: registraPonto []')
+    btn_check_in = browser.find_element(By.ID, 'registraPonto')
+
+    if btn_check_in:
+        btn_check_in.click()
+        logging.info('[] Cliquei no button []')
+
 
     logging.info('[] Ponto batido em: ' + str(actual_date) + '. []')
     browser.quit()
@@ -82,7 +94,12 @@ def do_check_in():
 
 def get_browser():
     options = webdriver.ChromeOptions()
+    options.add_argument("--incognito")
     options.add_argument("--headless")
+    options.add_experimental_option("prefs", { \
+    "profile.default_content_setting_values.media_stream_camera": 2,
+    "profile.default_content_setting_values.geolocation": 1,
+    })
     browser = webdriver.Chrome(options)
     return browser
 
