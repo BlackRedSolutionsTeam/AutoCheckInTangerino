@@ -1,5 +1,12 @@
-# Auto check-in for Tangerino
+# Auto check-in for Tangerino | Tested on Ubuntu
  Project just for study purpose in python
+
+
+## Clone Project:
+
+```
+git clone https://github.com/BlackRedSolutionsTeam/AutoCheckInTangerino.git
+```
 
 
 ## Libs to install in Ubuntu:
