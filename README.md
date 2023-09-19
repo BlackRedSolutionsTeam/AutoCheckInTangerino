@@ -1,5 +1,12 @@
-# Auto check-in for Tangerino
+# Auto check-in for Tangerino | Tested on Ubuntu
  Project just for study purpose in python
+
+
+## Clone Project:
+
+```
+git clone https://github.com/BlackRedSolutionsTeam/AutoCheckInTangerino.git
+```
 
 
 ## Libs to install in Ubuntu:
@@ -19,13 +26,5 @@ and finish work at 06:00 PM
 I recommend: 
 ```
 0 9 * * * cd /home/USER/AutoCheckInTangerino && python3 program.py
-57 17 * * * cd /home/vagnerking/AutoCheckInTangerino && python3 program.py
+57 17 * * * cd /home/USER/AutoCheckInTangerino && python3 program.py
 ```
-
-
-
-
-
-
-Remove winsound lib if not using windows.
-
