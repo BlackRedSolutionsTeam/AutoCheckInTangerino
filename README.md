@@ -12,7 +12,7 @@ git clone https://github.com/BlackRedSolutionsTeam/AutoCheckInTangerino.git
 ## Libs to install in Ubuntu:
 
 ```
-$ sudo apt-get install python3 chromium-chromedriver && pip install workalendar && pip install -U selenium
+sudo apt-get install python3 chromium-chromedriver && pip install workalendar && pip install -U selenium
 ```
 
 ## Crontab: 
