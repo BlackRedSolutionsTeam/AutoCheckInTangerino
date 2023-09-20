@@ -52,7 +52,7 @@ def do_check_in():
     logging.info('[] O ponto sera batido em ' + str(minutes_variation) + ' minuto(s). []')
 
     time.sleep(minutes_variation * 60)
-    
+
     browser = get_browser()
     browser.get(config["tangerino"]["check_in_url"])
     logging.info('[] Entrando no site... []')
@@ -75,6 +75,7 @@ def do_check_in():
     btn_check_in.click()
     logging.info('[] Cliquei no button []')
 
+    time.sleep(3)
 
     logging.info('[] Ponto batido! []')
     browser.quit()
