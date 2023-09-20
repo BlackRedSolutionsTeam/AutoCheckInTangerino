@@ -49,9 +49,10 @@ def is_holiday():
 
 
 def do_check_in():
-    time.sleep(minutes_variation * 60)
     logging.info('[] O ponto sera batido em ' + str(minutes_variation) + ' minuto(s). []')
 
+    time.sleep(minutes_variation * 60)
+    
     browser = get_browser()
     browser.get(config["tangerino"]["check_in_url"])
     logging.info('[] Entrando no site... []')
@@ -59,26 +60,23 @@ def do_check_in():
     logging.info('[] Procurando input com id: codigoEmpregador []')
     input_employer_code = browser.find_element(By.ID, 'codigoEmpregador')
 
-    if input_employer_code:
-        input_employer_code.send_keys(config["infos"]["employer_code"])
-        logging.info('[] Digitei o codigo empregador: ' + config["infos"]["employer_code"] + ' []')
+    input_employer_code.send_keys(config["infos"]["employer_code"])
+    logging.info('[] Digitei o codigo empregador: ' + config["infos"]["employer_code"] + ' []')
 
     logging.info('[] Procurando input com id: codigoPin []')
-    input_employer_code = browser.find_element(By.ID, 'codigoPin')
+    input_codigo_pin = browser.find_element(By.ID, 'codigoPin')
 
-    if input_employer_code:
-        input_employer_code.send_keys(config["infos"]["pin"])
-        logging.info('[] Digitei o PIN ' + config["infos"]["pin"] + ' []')
+    input_codigo_pin.send_keys(config["infos"]["pin"])
+    logging.info('[] Digitei o PIN ' + config["infos"]["pin"] + ' []')
 
     logging.info('[] Procurando button com id: registraPonto []')
     btn_check_in = browser.find_element(By.ID, 'registraPonto')
 
-    if btn_check_in:
-        btn_check_in.click()
-        logging.info('[] Cliquei no button []')
+    btn_check_in.click()
+    logging.info('[] Cliquei no button []')
 
 
-    logging.info('[] Ponto batido em: ' + str(actual_date) + '. []')
+    logging.info('[] Ponto batido! []')
     browser.quit()
 
 
