@@ -21,7 +21,7 @@ minutes_variation = random.randint(0, int(config["schedule"]["minutes_variation"
 def main():
     logging.info('[] Programa AutoCheckInTangerino iniciado []')
 
-    if not is_holiday() and is_work_day:
+    if not is_holiday() and is_work_day():
         do_check_in()
 
     logging.info('[] O programa encerrara em 5 segundos.. []')
